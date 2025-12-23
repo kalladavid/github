@@ -1,0 +1,26 @@
+name: Sample GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print start message
+        run: echo "Workflow started"
+
+      - name: Show date and time
+        run: date
+
+      - name: Show runner details
+        run: |
+          echo "OS info:"
+          uname -a
+
+      - name: Finish message
+        run: echo "Workflow completed successfully"
